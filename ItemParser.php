@@ -113,7 +113,4 @@ class ItemParser
             file_put_contents($this->basePath . '/images360/'. $modelSubdir . '/' . $i . '.jpg', $image);
         }
     }
-}   
-
-$itemParser = new ItemParser(['BASE_PATH' => '/home/dmitri/3dhumster']); 
-$itemParser->parseItemInformation($argv[1]);
+}
