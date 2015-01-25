@@ -3,3 +3,4 @@ images360
 models.txt
 /nbproject/private/
 nbproject
+db_params.php
