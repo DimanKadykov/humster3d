@@ -30,7 +30,7 @@
 
                         <!--End of tab-pane-->
                         <div class="tab-pane commonContent active" id="regularlogin" style="min-height: 200px">
-                            <form action="/auth/restore_password.php" method="POST" id="login-form" name="login-form">
+                            <form action="/auth/reset_password.php" method="POST" id="login-form" name="login-form">
                                 <input type="text" class="common" name="email" placeholder="Email" value="">
                                 <br /><br />
                                 <input type="submit" class="btn btn-login" value="Restore password" />
