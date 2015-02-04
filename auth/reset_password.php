@@ -32,9 +32,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $stmt->bindParam(':token', $token);
         $stmt->execute();
         
-        $mail->From = 'noreply@3dwrapapp.com';
+        $mail->From = 'noreply@sharklasers.com';
         $mail->FromName = 'Mailer';
-        $mail->addAddress('d.kadykov@gmail.com', 'Dmitri Kadykov');
+        $mail->addAddress($email);
         $mail->isHTML(true); 
 
         $mail->Subject = 'Resstore password';

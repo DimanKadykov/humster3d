@@ -45,49 +45,7 @@
                 <!--End of bottomContent-->
             </div>
             <!--End of commonContainer-->
-            <?php /*
-              <div class="commonContainer pull-right">
-              <h2>Register</h2>
-              <div class="commonContent border shadow bg-white">
-              <div class="tab-content">
-              <div>
-              <?php if (!empty($errorsReg)): ?>
-              <?php foreach ($errorsReg as $error): ?>
-              <p style="color:red">
-              <?php echo $error ?>
-              </p>
-              <?php endforeach; ?>
-              <?php endif; ?>
-              </div>
 
-              <div class="tab-pane active " id="regularregister">
-              <form action="/auth/register.php" method="POST" id="register-form-mystyle" name="register-form-mystyle">
-              <input type="text" class="common" name="first_name" required="true" placeholder="First name" value="">
-              <input type="text" class="common" name="last_name" required="true" placeholder="Last name" value="">
-              <input type="text" class="common" name="email" placeholder="Email" required="true" value="">
-              <input type="password" class="common" name="password" placeholder="Password" required="true">
-              <input type="password" class="common" name="password_repeat" required="true" placeholder="Retype Password">
-              <span class="bagree">
-              <span>
-              <input type="checkbox" name="terms-agree" required="true" value="agree" checked>
-              </span>
-              <label>
-              I agree to the
-              <a href="https://www.whateverskateboards.com/terms-and-conditions" target="_blank" rel="nofollow">
-              Terms of Service
-              </a> and
-              <a href="https://www.whateverskateboards.com/privacy-policy.php" target="_blank" rel="nofollow">
-              Privacy Policy
-              </a>
-              </label>
-              </span>
-              <!--End of -->
-              <input type="submit" class="btn btn-login" value="Register" />
-              </form>
-              </div>
-              </div>
-              </div>
-             */ ?>
             <!--End of commonContent-->
         </div>
         <!--End of commonContainer-->
