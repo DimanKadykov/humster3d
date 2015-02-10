@@ -13,3 +13,5 @@ $mail->Username = 'AKIAIQVINUJFVT55FQJA';                         // SMTP userna
 $mail->Password = 'AqxCzVw1lbfMMEW+eNrGhMM6uPpfsm6ebLLKxp+sUnG0'; // SMTP password
 $mail->SMTPSecure = 'tls';                                        // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 587;  
+$mail->From = 'noreply@sharklasers.com';
+$mail->FromName = '3dWrapper';

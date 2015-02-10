@@ -20,6 +20,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     
     if(!$result) {
         $loginErrors[]= 'No such user or password is incorrect'; 
+    } elseif(!$result['is_active']) {
+        $loginErrors[]= 'Your account is not active. Check your email and follow the activation link'; 
     } else {
         if(md5($password) != $result['password_hash']) {
             $loginErrors[]= 'No such user or password is incorrect'; 

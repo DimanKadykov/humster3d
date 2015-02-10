@@ -15,8 +15,9 @@ class User extends BaseModel
     protected $password;
     protected $password_repeat;
     protected $password_hash;
-    protected $table_name = 'user';
-    protected $dbFields = ['first_name', 'last_name', 'email', 'password_hash'];
+    protected $registration_confirm_token;
+    protected $table_name = 'user';    
+    protected $dbFields = ['first_name', 'last_name', 'email', 'password_hash', 'registration_confirm_token'];
     
     public function getFirstName()
     {
@@ -71,6 +72,17 @@ class User extends BaseModel
     {
         $this->password_repeat = $passwordRepeat;
         return $this;
+    }
+    
+    public function generateRegistrationConfirmToken()
+    {
+        $token = md5($this->email) . md5(microtime());
+        $this->registration_confirm_token = $token;
+    }            
+    
+    public function getRegistrationConfirmToken()
+    {
+        return $this->registration_confirm_token;
     }
     
     public function validate()

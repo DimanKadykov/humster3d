@@ -32,26 +32,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $stmt->bindParam(':token', $token);
         $stmt->execute();
         
-        $mail->From = 'noreply@sharklasers.com';
-        $mail->FromName = 'Mailer';
         $mail->addAddress($email);
-        $mail->isHTML(true); 
-
+        $mail->isHTML(true);
         $mail->Subject = 'Resstore password';
         $mail->Body    = 'To change password follow this <a href="http://3dwrapapp.com/auth/change_password.php?token=' . $token . '">link</a>';
         $mail->send();
         
         HttpUtils::addFlash('Link for changing password has been sent to your email');
-
-//        if(!$mail->send()) {
-//            echo 'Message could not be sent.';
-//            echo 'Mailer Error: ' . $mail->ErrorInfo;
-//        } else {
-//            echo 'Message has been sent';
-//        }
-        
-//        exit;
-        
         header('Location: /ImageRoller/');
     }
 }
